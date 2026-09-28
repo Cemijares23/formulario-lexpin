@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Order your favorite burger at Burguer House!" />
+    <meta
+      name="description"
+      content="Order your favorite burger at Burguer House!"
+    />
     <title>Burguer House - Order Formr</title>
 
     <link rel="stylesheet" href="css/styles.css" />
@@ -16,14 +19,11 @@
       </header>
       <main>
         <form action="order-success.html" method="GET">
-          <fieldset>
+          <fieldset class="contact-info">
             <legend>Contact Information</legend>
 
-            <label for="first-name">First Name:</label>
-            <input type="text" id="first-name" name="first-name" required />
-
-            <label for="last-name">Last Name:</label>
-            <input type="text" id="last-name" name="last-name" required />
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required />
@@ -32,7 +32,7 @@
             <input type="tel" id="phone" name="phone" required />
           </fieldset>
 
-          <fieldset>
+          <fieldset class="order-info">
             <legend>Your Order</legend>
 
             <label for="burger">Choose your burger:</label>
@@ -54,23 +54,25 @@
               required
             />
 
-            <label for="extras">Extras:</label>
-            <input type="checkbox" id="cheese" name="extras" value="cheese" />
-            <label for="cheese">Extra Cheese</label>
+            <div class="extras">
+              <label for="extras">Extras:</label>
+              <input type="checkbox" id="cheese" name="extras" value="cheese" />
+              <label for="cheese">Extra Cheese</label>
 
-            <input type="checkbox" id="bacon" name="extras" value="bacon" />
-            <label for="bacon">Extra Bacon</label>
+              <input type="checkbox" id="bacon" name="extras" value="bacon" />
+              <label for="bacon">Extra Bacon</label>
 
-            <input type="checkbox" id="onions" name="extras" value="onions" />
-            <label for="onions">Grilled Onions</label>
+              <input type="checkbox" id="onions" name="extras" value="onions" />
+              <label for="onions">Grilled Onions</label>
 
-            <input
-              type="checkbox"
-              id="mushrooms"
-              name="extras"
-              value="mushrooms"
-            />
-            <label for="mushrooms">Mushrooms</label>
+              <input
+                type="checkbox"
+                id="mushrooms"
+                name="extras"
+                value="mushrooms"
+              />
+              <label for="mushrooms">Mushrooms</label>
+            </div>
 
             <label for="sauces">Drink: </label>
             <select id="drink" name="drink">
@@ -81,7 +83,7 @@
             </select>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="delivery-info">
             <legend>Delivery</legend>
 
             <input
